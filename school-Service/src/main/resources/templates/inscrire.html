@@ -1,0 +1,35 @@
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Inscrire un Étudiant</title>
+        <link rel="stylesheet" th:href="@{/css/style.css}" href="../../static/css/style.css" />
+    </head>
+    <body>
+
+    <div class="navbar">
+        <a href="/add/student">➕ Étudiant</a> |
+        <a href="/add/cours">➕ Cours</a> |
+        <a href="/summary">📊 Résumé</a>
+    </div>
+
+    <div class="container">
+        <h2>📝 Inscrire un étudiant à un cours</h2>
+
+        <form th:action="@{/inscrire}" method="post">
+            <label for="studentId">ID Étudiant :</label>
+            <input type="number" id="studentId" name="studentId" required />
+
+            <label for="coursId">ID Cours :</label>
+            <input type="number" id="coursId" name="coursId" required />
+
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2025 School Service - Microservices + Feign + RabbitMQ</p>
+    </footer>
+
+    </body>
+    </html>

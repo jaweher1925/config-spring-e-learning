@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Résumé École</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../../static/css/style.css" />
+</head>
+<body>
+<div class="navbar">
+    <a href="/add/student">➕ Étudiant</a> |
+    <a href="/add/cours">➕ Cours</a> |
+    <a href="/inscrire">📝 Inscription</a>
+</div>
+
+<div class="container">
+    <h1>📊 Résumé Global</h1>
+    <div class="summary-box">
+        <p>🎓 Nombre d'étudiants : <strong th:text="${summary.totalStudents}">0</strong></p>
+        <p>📚 Nombre de cours : <strong th:text="${summary.totalCours}">0</strong></p>
+        <p>✅ Nombre d'inscriptions : <strong th:text="${summary.totalInscriptions}">0</strong></p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 School Service - Microservices + Feign + RabbitMQ</p>
+</footer>
+</body>
+</html>
